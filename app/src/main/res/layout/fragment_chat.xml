@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ui.fragment.ChatFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+   >
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="70dp"
+        android:autofillHints="Search Here"
+        android:background="@drawable/background_searchbar"
+        android:fontFamily="@font/urbanistmedium"
+        android:hint="@string/avatar_bared_bunny"
+        android:inputType="text"
+        android:paddingStart="50dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:paddingStart="2dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="0dp"
+        android:src="@drawable/ic_baseline_search_24"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/et_search"
+        app:layout_constraintStart_toStartOf="@id/et_search"
+        app:layout_constraintTop_toTopOf="@id/et_search" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_filter"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_filter"
+        android:src="@drawable/filternew"
+        android:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_search"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_search">
+        <TextView
+            android:id="@+id/tv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#5446FF"
+            android:fontFamily="@font/urbanistbold"
+            android:text="@string/chat"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:paddingBottom="10dp"
+            app:layout_constraintHorizontal_weight="5" />
+
+        <TextView
+            android:id="@+id/tv_Group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:fontFamily="@font/urbanistbold"
+            android:layout_weight="1"
+            android:text="@string/group"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerchat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        tools:listitem="@layout/recycler_group" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

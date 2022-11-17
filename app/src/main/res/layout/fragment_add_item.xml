@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ui.fragment.AddItemFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_profilebackground"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cartoonmain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button_back"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/backbutton_design"
+        android:paddingStart="13dp"
+        android:paddingEnd="0dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image_prpfile"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="95dp"
+        android:src="@drawable/image"
+        app:roundPercent="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/urbanistbold"
+        android:text="@string/upload"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_prpfile" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textview_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/doted_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_upload" >
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/corner_image"
+            android:foregroundGravity="center"
+            android:src="@drawable/ic_outline_broken_image_24"
+            app:layout_constraintCircleRadius="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textview_container" />
+
+        <TextView
+            android:id="@+id/text_uploadfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/upload_your_file_here"
+            android:fontFamily="@font/urbanistmedium"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_profile" />
+
+        <TextView
+            android:id="@+id/tv_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/browse"
+            android:fontFamily="@font/urbanistmedium"
+            android:textColor="#487DFC"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_uploadfile" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_container">
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="73dp"
+            android:layout_height="60dp"
+            android:background="@drawable/corner_background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_two"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:text="@string/plus"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/urbanistextrabold"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="73dp"
+            android:layout_height="60dp"
+            android:background="@drawable/corner_background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_three"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_one"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="73dp"
+            android:layout_height="60dp"
+            android:background="@drawable/corner_background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_four"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_two"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="73dp"
+            android:layout_height="60dp"
+            android:background="@drawable/corner_background_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_three"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/title"
+        android:fontFamily="@font/urbanistmedium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_horizontal" />
+
+    <EditText
+        android:id="@+id/edittext_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/corner_background_dark"
+        android:fontFamily="@font/urbanistmedium"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/description"
+        android:fontFamily="@font/urbanistmedium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittext_title" />
+
+    <EditText
+        android:id="@+id/edittext_description"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/corner_background_dark"
+        android:fontFamily="@font/urbanistmedium"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_description" />
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/price"
+        android:fontFamily="@font/urbanistmedium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittext_description" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_price"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="22dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <TextView
+                android:id="@+id/tv_currency"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/dollar"
+                android:paddingStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="0dp"
+                android:paddingEnd="15dp"
+                android:fontFamily="@font/urbanistextrabold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintEnd_toStartOf="@id/iv_priceline"
+                android:background="@color/color_register"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_priceline"
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@id/tv_currency"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_line_1"/>
+            <EditText
+                android:id="@+id/edittext_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_register"
+                android:autofillHints="emailAddress"
+                android:fontFamily="@font/urbanistmedium"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_priceline"
+                android:paddingEnd="0dp"
+                android:paddingStart="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/corner_background"
+        android:text="@string/add"
+        android:fontFamily="@font/urbanistmedium"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardviewprice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

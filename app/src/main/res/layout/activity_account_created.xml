@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ui.activities.AccountCreatedActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_accountcreated"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/ic_vectorcreated"
+        android:scaleType="centerInside"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_tickcreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_accountcreated"
+        app:layout_constraintEnd_toEndOf="@id/image_accountcreated"
+        app:layout_constraintTop_toTopOf="@id/image_accountcreated"
+        app:layout_constraintBottom_toBottomOf="@id/image_accountcreated"
+        android:src="@drawable/ic_vectortick"/>
+    <TextView
+        android:id="@+id/text_accountcreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="center"
+        android:text="@string/account_created"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:fontFamily="@font/urbanistbold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_accountcreated"/>
+    <TextView
+        android:id="@+id/text_detail_accountcreated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="75dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="5dp"
+        android:text="@string/your_account_has_been_created_successfully"
+        android:textColor="@color/color_otpdetail"
+        android:textAlignment="center"
+        android:fontFamily="@font/urbanistmedium"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_accountcreated" />
+    <Button
+        android:id="@+id/button_backlogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/corner_background"
+        android:text="@string/back_to_login"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/urbanistmedium"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_detail_accountcreated" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

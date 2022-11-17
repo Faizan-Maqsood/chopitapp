@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ui.fragment.OrderCompletedFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button_back"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/backbutton_design"
+        android:paddingStart="13dp"
+        android:paddingEnd="0dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_ordercompleted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back"
+        android:src="@drawable/cartoonmain"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="80dp"
+        />
+    <TextView
+        android:id="@+id/tv_ordercompleted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_ordercompleted"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:text="@string/order_completed_successfully"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:fontFamily="@font/urbanistbold"
+        android:textColor="@color/white"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ordercompleted"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_circlecompleted"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_tick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/iv_circle"
+        app:layout_constraintEnd_toEndOf="@id/iv_circle"
+        app:layout_constraintTop_toTopOf="@id/iv_circle"
+        app:layout_constraintBottom_toBottomOf="@id/iv_circle"
+        android:src="@drawable/ic_tickcompleted"/>
+    <Button
+        android:id="@+id/button_completed"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/corner_background"
+        android:text="@string/completed"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/urbanistmedium"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_circle"
+        android:layout_marginBottom="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

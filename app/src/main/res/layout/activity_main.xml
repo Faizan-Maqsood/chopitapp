@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    tools:context=".ui.activities.MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/text_chopitapp"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="270dp"
+        android:textAlignment="center"
+        android:text="@string/chopit_app"
+        android:textColor="@color/white"
+        android:fontFamily="@font/urbanistextrabold"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:background="@drawable/corner_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_chopitapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="130dp"/>
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:background="@drawable/corner_background_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_login"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/text_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_register"
+        android:text="@string/continue_as_a_guest"
+        android:fontFamily="@font/urbanistmedium"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
